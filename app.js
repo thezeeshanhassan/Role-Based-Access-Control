@@ -12,23 +12,32 @@ main().then(() => {
     console.log(err);
 })
 async function main() {
-    await mongoose.connect(`mongodb://127.0.0.1:27017/wanderLust`);
+    await mongoose.connect(`mongodb://127.0.0.1:27017/rbac`);
 }
 
 app.get(`/`, (req, res) => {
     res.send(`Working on the PORT ${port}`);
 })
 
-app.get('/adduser', async (req, res) => {
-    
-        let newUser = new User({
-            username: "zeeshan",
-            password : "zeeshan125",
-            role: "manager" 
-        });
-        await newUser.save();
-        res.status(200).send(newUser);
-});
+// app.get('/adduser', async (req, res) => {
+//         let password = "hamza@125";
+//         let newUser = new User({
+//             username: "hamza",
+//             role: "employee" 
+//         });
+        
+//         User.register(newUser, password, (err) => {
+//             if (err) {
+//               console.log(err);
+//               return res.status(500).json({ error: err.message });
+//             }
+//             res.send(newUser);
+//           });
+// });
+
+app.get('/login', (req ,res) => {
+    res.send("Working on Login")
+})
 
 
 let port = 8000;

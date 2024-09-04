@@ -3,7 +3,8 @@ const Role = require('../models/role');
 
 // Register a new user with a role
 exports.registerUser = (req, res) => {
-  const { username, password, role } = req.body;
+  const { username, password, role } = {'username' : "zeeshanhassan",
+     'password' : "zeeshan125", 'role' : ""};
   const user = new User({ username, role });
 
   User.register(user, password, (err) => {

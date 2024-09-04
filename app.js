@@ -24,7 +24,7 @@ app.get('/adduser', async (req, res) => {
         let newUser = new User({
             username: "zeeshan",
             password : "zeeshan125",
-            role: "manager" // Assuming 'role' is the correct field
+            role: "manager" 
         });
         await newUser.save();
         res.status(200).send(newUser);

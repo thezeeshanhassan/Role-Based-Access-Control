@@ -6,6 +6,9 @@ const mongoose = require('mongoose');
 const app = express();
 
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname,'./Views'));
+
 main().then(() => {
     console.log("Connected to Database");
 }).catch ((err) => {
@@ -36,7 +39,7 @@ app.get(`/`, (req, res) => {
 // });
 
 app.get('/login', (req ,res) => {
-    res.send("Working on Login")
+    res.render('login.ejs')
 })
 
 

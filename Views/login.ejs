@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In to RBAC</title>
+</head>
+<body>
+    <h2 class="offset-1 mt-3">Log In to RBAC</h2>
+    <div class="row form-div mt-3">
+        <div class="col-8 offset-1">
+            <form action="/login" novalidate class="needs-validation" method="POST">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" name="username" required class="form-control">
+                    <div class="valid-feedback">Good!</div>
+                    <div class="invalid-feedback">Please enter a valid username.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" name="password" required class="form-control">
+                    <div class="valid-feedback">Good!</div>
+                    <div class="invalid-feedback">Please enter a valid password.</div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-dark edit-btn mt-3">Log In</button>
+                <br><br>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
